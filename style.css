@@ -188,4 +188,9 @@ span:hover {
   .img-b-4 {
     background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
   }
+  .img-b-1,
+  .img-b-2,
+  .img-b-3,
+  .img-b-4{
+   height: 30vh}
 }
