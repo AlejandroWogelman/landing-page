@@ -1,0 +1,99 @@
+header {
+  position: relative;
+  color: white;
+}
+.button-toggle-menu {
+  display: none;
+}
+h2 {
+  position: relative;
+  top: 50%;
+
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+}
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  z-index: 100;
+}
+.toggle {
+  background-color: rgb(255, 253, 250);
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin-right: 40px;
+}
+.nav ul li {
+  margin: 5px 8px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+li:hover {
+  background-color: rgba(253, 253, 253, 0.425);
+}
+@media screen and (max-width: 600px) {
+  .nav ul {
+    margin: 0;
+  }
+
+  #list-nav {
+    transition: transform 0.2s;
+    position: absolute;
+    padding: 10px;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    top: 60px;
+    clip-path: polygon(0% 5%, 94% 5%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .button-toggle-menu {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    transition: 0.3s;
+  }
+  .button-toggle-menu .fas {
+    padding: 10px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  li:hover {
+    background-color: rgba(243, 255, 80, 0.644);
+  }
+  .toggle {
+    background-color: hsl(51, 100%, 49%);
+  }
+}
+
+.button-toggle-menu:hover {
+  background-color: black;
+}
+
+#services {
+  transition: 1s;
+}
+
+.toggle-menu {
+  transform: translateY(-300px);
+}

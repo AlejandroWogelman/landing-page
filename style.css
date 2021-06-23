@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  font-family: "Barlow", sans-serif;
+}
+
+/*Cards*/
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  height: 80vh;
+  width: 90%;
+  margin: 5px auto 50px auto;
+}
+.title-card-container {
+  grid-column: 2/3;
+  background-color: hsl(0, 0%, 100%);
+  margin: auto;
+}
+.title-card-container h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 100px 0 30px 0;
+  color: hsl(232, 10%, 55%);
+  letter-spacing: 3px;
+}
+
+.card-1 {
+  grid-column: 1/2;
+  grid-row: 2/2;
+}
+.card-2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.card-3 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 0 20%;
+  text-align: center;
+  color: hsl(232, 10%, 55%);
+}
+
+.img-card-1 {
+  background-image: url(./images/image-emily.jpg);
+}
+.img-card-2 {
+  background-image: url(./images/image-thomas.jpg);
+}
+.img-card-3 {
+  background-image: url(./images/image-jennie.jpg);
+}
+
+.img-card-1,
+.img-card-2,
+.img-card-3 {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+
+article h4 {
+  color: black;
+}
+article h5 {
+  font-family: "Barlow", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .card-container {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .title-card-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .card-1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .card-2 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .card-3 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
+
+.imgs-bottom {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: auto;
+}
+
+.img-b-1,
+.img-b-2,
+.img-b-3,
+.img-b-4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+.img-b-1 {
+  background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+}
+.img-b-2 {
+  background-image: url(./images/desktop/image-gallery-orange.jpg);
+}
+.img-b-3 {
+  background-image: url(./images/desktop/image-gallery-cone.jpg);
+}
+.img-b-4 {
+  background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+}
+
+footer {
+  height: 40vh;
+  background-color: hsla(168, 48%, 56%, 0.767);
+  padding: 50px 20px 0px 20px;
+}
+.box-f {
+  height: 33%;
+}
+.box-f h3 {
+  font-size: 1.6rem;
+  color: hsl(198, 62%, 26%);
+  text-align: center;
+}
+.box-f {
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  font-size: 1.2rem;
+  color: hsl(168, 34%, 41%);
+  margin: 0 20px;
+  cursor: pointer;
+  height: min-content;
+}
+span:hover {
+  color: white;
+}
+
+.back-header {
+  background-color: rgba(0, 0, 0, 0.253);
+  transition: 1s;
+}
+
+@media screen and (max-width: 650px) {
+  .imgs-bottom {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .img-b-1 {
+    background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+  }
+  .img-b-2 {
+    background-image: url(./images/mobile/image-gallery-orange.jpg);
+  }
+  .img-b-3 {
+    background-image: url(./images/mobile/image-gallery-cone.jpg);
+  }
+  .img-b-4 {
+    background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+  }
+}
