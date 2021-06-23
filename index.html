@@ -187,7 +187,7 @@
     <script>
       const nav = document.getElementById("nav");
       //cada intervalo compruebo si la distancia con la parte superior es menos a 150
-      //Si es menor le remuevo la clase que da background, si es mayor se la agrego.
+      //Si es menor le remuevo la clase que da background al nav, si es mayor se la agrego.
 
       setInterval(function () {
         if (window.pageYOffset < 150) {
@@ -196,25 +196,44 @@
           nav.classList.add("back-header");
         }
       }, 2000);
-
+      /*---------------------------------------------------------------------------*/
       const lista = document.querySelectorAll("ul li");
 
       lista.forEach((list, index, lista) => {
+        //Evento click para cada lista del UL
         list.addEventListener("click", () => {
           lista.forEach((l) => {
+            //for each para eliminar la clase toggle que cambia background del boton seleccionado
+            //de lo contrario habria que volver a seleccionarlo para sacar su background
             l.classList.contains("toggle") && l.classList.remove("toggle");
           });
+
+          //al hacer click le agrega la clase toggle (cambia background del boton al presionar)
           list.classList.add("toggle");
+
+          //Escondo el menu al seleccionar una opcion del nav
           listNav.classList.toggle("toggle-menu");
         });
       });
-      window.addEventListener("resize", () => {
-        listNav.classList.remove("toggle-menu");
-      });
+      /*---------------------------------------------------------------------------*/
+      /*    window.addEventListener("resize", () => {
+        //La comprobacion de tamaño de ventana evita que al achicarse
+        //no vuelva a aparecer el menu si éste estaba cerrado
+        if (window.innerWidth > 600) {
+          console.log(window.innerWidth);
+          listNav.classList.remove("toggle-menu");
+        }
+      }); */ //Al AGREGAR UN INICIO -500PX DEL NAV EN MOBILE, NO HIZO FALTA LA COMPROBACION
+      //YA QUE DIRECTAMENTE NO ESTA VISIBLE Y EL NAV AL AGRANDAR PANTALLA NO SE QUEDA
+      // INVISIBLE YA QUE SE MODIFICA EN -600PX  @query----
+      //                                         AUNQUE SI SE DEJA ABIERTO EN MOBILE, SE VA A TAMAÑO DESKTOP
+      //                                         Y SE VUELVE A MOBILE, SE ABRE Y QUEDA SELECCIONADO LO ANTERIOR A RESIZE
+      /*---------------------------------------------------------------------------*/
       const listNav = document.querySelector("#list-nav");
       const btnMenu = document.querySelector("#btn-menu");
       btnMenu.addEventListener("click", () => {
         listNav.classList.toggle("toggle-menu");
+        //toggle-menu oculta el nav
       });
     </script>
   </body>

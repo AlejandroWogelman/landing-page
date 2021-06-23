@@ -62,7 +62,6 @@ li:hover {
   }
 
   #list-nav {
-    transition: transform 0.2s;
     position: absolute;
     padding: 10px;
     width: 50%;
@@ -75,6 +74,7 @@ li:hover {
     text-align: center;
     top: 60px;
     clip-path: polygon(0% 5%, 94% 5%, 100% 0%, 100% 100%, 0% 100%);
+    transform: translateY(-400px);
   }
   .button-toggle-menu {
     display: block;
@@ -105,5 +105,6 @@ li:hover {
 }
 
 .toggle-menu {
-  transform: translateY(-300px);
+  transform: translateY(0px) !important;
+  transition: 0.3s;
 }
